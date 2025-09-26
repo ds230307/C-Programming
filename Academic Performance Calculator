@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+    int a,b,c,d,e,x;
+    float y,z;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    scanf("%d", &d);
+    scanf("%d", &e);
+    x=a+b+c+d+e;
+    y=x/5;
+    z=x/5;
+    printf("%d %.2f %.2f", x,y,z);
+
+    return 0;
+}
