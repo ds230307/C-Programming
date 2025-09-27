@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float n,met,km;
+    scanf("%f", &n);
+    met=n/100;
+    printf("%.2f ", met);
+    km=met/1000;
+    printf("%.2f", km);
+    return 0;
+}
