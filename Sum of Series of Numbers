@@ -1,0 +1,13 @@
+//WAP to print the sum of the series i.e sum=1+2+3+4+.....+N;
+#include<stdio.h>
+int main(){
+    int i, n , sum=0;
+    printf("Enter the value of N");
+    scanf("%d", &n);
+    for(i=1; i<=n; i++){
+        sum += i; 
+       
+    }
+    printf(" sum=%d\t", sum); 
+    return 0;
+}
