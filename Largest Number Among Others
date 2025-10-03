@@ -1,0 +1,15 @@
+//WAP to find the largest number among N;
+#include<stdio.h>
+int main(){
+    int i, n , num, max=0;
+    printf("Enter the value of N");
+    scanf("%d", &n);
+    for(i=1; i<=n; i++){
+        printf("Enter Number ");
+        scanf("%d", &num);
+        if(num>max)
+         max = num;  
+    }
+    printf("max=%d", max); 
+    return 0;
+}
