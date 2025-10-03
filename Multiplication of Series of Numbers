@@ -1,0 +1,13 @@
+//WAP to perform multiplication of the series i,e mul= 1*2*3*4*......*N;
+#include<stdio.h>
+int main(){
+    int i, n , multi=1;
+    printf("Enter the value of N");
+    scanf("%d", &n);
+    for(i=1; i<=n; i++){
+        multi *= i; 
+       
+    }
+    printf(" multi=%d\t", multi); 
+    return 0;
+}
