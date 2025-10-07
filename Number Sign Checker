@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   int N;
+    scanf("%d", &N);
+    if (N >0) {
+        printf("Positive\n");
+    } else if (N<0) {
+        printf("Negative\n");
+    } else{
+        printf("Zero\n");
+    }
+    return 0;
+}
