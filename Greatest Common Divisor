@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int A, B, hcf = 1, i;
+    scanf("%d %d", &A, &B);
+    int min = (A < B) ? A : B;
+    for (i = 1; i <= min; i++) {
+        if (A % i == 0 && B % i == 0) {
+            hcf = i;
+        }
+    }
+    printf("%d\n", hcf);
+    return 0;
+}
