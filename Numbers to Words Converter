@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int N, rev = 0, d;
+    char *words[] = {"Zero", "One", "Two", "Three", "Four",
+                     "Five", "Six", "Seven", "Eight", "Nine"};
+    scanf("%d", &N);
+
+    if (N == 0) {
+        printf("Zero\n");
+        return 0;
+    }
+    int temp = N;
+    while (temp > 0) {
+        rev = rev * 10 + temp % 10;
+        temp /= 10;
+    }
+
+    temp = N;
+    int zeros = 0;
+    while (temp % 10 == 0) {
+        zeros++;
+        temp /= 10;
+    }
+
+    while (rev > 0) {
+        d = rev % 10;
+        printf("%s ", words[d]);
+        rev /= 10;
+    }
+
+    while (zeros--) {
+        printf("Zero ");
+    }
+
+    printf("\n");
+    return 0;
+}
