@@ -1,0 +1,15 @@
+#include<stdio.h> 
+int main (){
+    int size;
+    printf("Enter Size=");
+    scanf("%d", &size);
+    int stu[size];
+   printf("Enter Roll No of Five students=");
+   for(int i=0; i<size; i++){
+    scanf("%d", &stu[i]);
+   }
+   for(int i=0; i<size; i++){
+    printf("%d ", stu[i]);
+   }
+    return 0;
+}
