@@ -1,19 +1,16 @@
 #include<stdio.h>
 int main(){
-    int rowsize, colsize;
-    printf("Enter row and column size :");
-    scanf("%d%d", &rowsize, &colsize);
-    int marks[rowsize][colsize];
-    printf("Enter 2D Array Elemnts :");
-    for(int i=0; i<rowsize; i++){
-        for(int j=0; j<colsize; j++){
+    int R, C;
+    scanf("%d%d", &R, &C);
+    int marks[R][C];
+    for(int i=0; i<R; i++){
+        for(int j=0; j<C; j++){
             scanf("%d", &marks[i][j]);
         }
     }
-    printf("\n\n");
-    for(int i=0; i<rowsize; i++){
-        for(int j=0; j<colsize; j++){
-            printf("%d", marks[i][j]);
+    for(int i=0; i<R; i++){
+        for(int j=0; j<C; j++){
+            printf("%d ", marks[i][j]);
         }
         printf("\n");
     }
