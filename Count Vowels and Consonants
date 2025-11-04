@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[1001];
+    int vowels = 0, consonants = 0;
+    int i = 0;
+    char ch;
+    scanf("%[^\n]", str);
+    while (str[i] != '\0') {
+        ch = tolower(str[i]);   
+        if (isalpha(ch)) {      
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+        i++;
+    }
+
+    printf("%d %d", vowels, consonants);
+    return 0;
+}
