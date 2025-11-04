@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char S[1001];
+    int count = 0;
+    scanf("%[^\n]", S);
+    for (int i = 0; S[i] != '\0'; i++) {
+        char ch = tolower(S[i]);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            count++;
+        }
+    }
+    printf("%d\n", count);
+    return 0;
+}
