@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <ctype.h>  
+int main() {
+    char str[1001];
+    int upper = 0, lower = 0;
+    int i = 0;
+    scanf("%[^\n]", str);
+    while (str[i] != '\0') {
+        if (isupper(str[i])) {
+            upper++;
+        } else if (islower(str[i])) {
+            lower++;
+        }
+        i++;
+    }
+    printf("%d %d", upper, lower);
+    return 0;
+}
