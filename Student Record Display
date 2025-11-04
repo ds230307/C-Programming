@@ -5,8 +5,7 @@ int main() {
     char name[100], branch[100], section[10], college[200];
 
     scanf("%d", &roll);
-    getchar(); // consume newline
-
+    getchar(); 
     gets(name);
     gets(branch);
     gets(section);
