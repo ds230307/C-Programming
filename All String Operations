@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h> 
+int main() {
+    char str1[100], str2[100], str3[100];
+    int length, cmp;
+    printf("Enter first string: ");
+    gets(str1);  
+    printf("Enter second string: ");
+    gets(str2);
+    printf("\nString 1: %s", str1);
+    printf("\nString 2: %s\n", str2);
+    length = strlen(str1);
+    printf("\nLength of first string = %d", length);
+    strcpy(str3, str1);
+    printf("\nCopy of first string (str3) = %s", str3);
+    strcat(str1, str2);
+    printf("\nAfter concatenation, str1 = %s", str1);
+    cmp = strcmp(str2, str3);
+    if (cmp == 0)
+        printf("\nSecond string and copy of first string are SAME");
+    else
+        printf("\nSecond string and copy of first string are DIFFERENT");
+    strrev(str2); 
+    printf("\nReversed second string = %s", str2);
+    return 0;
+}
