@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <ctype.h>  
+
+int main() {
+    char str[2001];
+    int count = 0, inWord = 0;
+    int i = 0;
+
+    
+    scanf("%[^\n]", str);
+
+  
+    while (str[i] != '\0') {
+        if (isalpha(str[i])) {       
+            if (inWord == 0) {      
+                count++;
+                inWord = 1;
+            }
+        } else {
+            inWord = 0;           
+        }
+        i++;
+    }
+
+    printf("%d", count);
+    return 0;
+}
