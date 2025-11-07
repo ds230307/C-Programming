@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char string[1000];
+    fgets(string, sizeof(string), stdin);
+    int max, index;
+    for(int i=0; string[i] != '\0'; i++){
+      int count=0;
+        for(int j=0; string[j]!='\0'; j++){
+            if(string[i]== string[j])
+                count++;
+        }
+        if(count>max){
+            max = count;
+            index = i;
+        }
+    }  
+    printf("%c occurs %d times", string[index], max);
+    return 0;
+}
