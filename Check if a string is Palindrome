@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s1[1000], rstring[1000];
+    fgets(s1, sizeof(s1), stdin);
+    // logic to convert string to lowercase
+    for(int i=0; s1[i]!='0'; i++){
+        s1[i] = tolower(s1[i]);
+    }
+    // logic to reverse a string
+    int k=0;
+    for(int i=strlen(s1)-1; i>=0; i--){
+        rstring[k++] = s1[i];
+    }
+    rstring[k]= '\0';
+    if(strcmp(s1, rstring)==0)
+        printf("Palindrome");
+    else
+        printf("Not Paalindrome");
+    return 0;
+}
