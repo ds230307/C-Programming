@@ -1,0 +1,23 @@
+#include <stdio.h>
+int isPrime(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i < num; i++) {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
+int main() {
+    int start, end;
+    scanf("%d %d", &start, &end);
+    int found = 0;
+    for (int i = start; i <= end; i++) {
+        if (isPrime(i)) {
+            printf("%d ", i);
+            found = 1;
+        }
+    }
+    if (!found)
+        printf("No prime numbers found");
+    return 0;
+}
