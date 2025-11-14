@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char S[1001];
+    int freq[256] = {0};  
+    int i;
+    char result = -1;
+    fgets(S, sizeof(S), stdin);
+    S[strcspn(S, "\n")] = '\0';
+    for (i = 0; S[i] != '\0'; i++) {
+        unsigned char c = S[i];
+        freq[c]++;
+    }
+    for (i = 0; S[i] != '\0'; i++) {
+        unsigned char c = S[i];
+        if (freq[c] == 1) {
+            result = c;
+            break;
+        }
+    }
+    if (result == -1)
+        printf("-1\n");
+    else
+        printf("%c\n", result);
+    return 0;
+}
