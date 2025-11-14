@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+int isArmstrong(int num) {
+    int original = num, sum = 0, digits = 0, temp;
+    temp = num;
+    while (temp > 0) {
+        digits++;
+        temp /= 10;
+    }
+    temp = num;
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += pow(digit, digits);
+        temp /= 10;
+    }
+    return sum == original;
+}
+int main() {
+    int start, end, found = 0;
+    scanf("%d %d", &start, &end);
+    for (int i = start; i <= end; i++) {
+        if (isArmstrong(i)) {
+            printf("%d ", i);
+            found = 1;
+        }
+    }
+    if (!found) {
+        printf("No Armstrong numbers found");
+    }
+    printf("\n");
+    return 0;
+}
