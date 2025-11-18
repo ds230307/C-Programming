@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b;
+    int *pt1 = &a, *pt2 = &b;
+    scanf("%d %d", pt1, pt2);
+    *pt1 = *pt1 + *pt2;
+    *pt2 = *pt1 - *pt2;
+    *pt1 = *pt1 - *pt2;
+    printf("%d %d", *pt1, *pt2);
+    return 0;
+}
