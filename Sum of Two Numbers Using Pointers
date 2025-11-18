@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int x, y;
+    int *pt1 = &x, *pt2 = &y;
+    scanf("%d %d", pt1, pt2);
+    int sum = *pt1 + *pt2;
+    printf("%d\n", sum);
+    return 0;
+}
