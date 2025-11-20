@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    int freq[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        freq[i] = 0;
+    }
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            if(arr[i] == arr[j]) {
+                freq[i]++;
+            }
+        }
+    }
+    int duplicate_count = 0;
+    for(int i = 0; i < n; i++) {
+        if(freq[i] > 1) {
+            duplicate_count++;
+            freq[i] = 0; 
+            for(int j = i+1; j < n; j++) {
+                if(arr[i] == arr[j]) {
+                    freq[j] = 0;
+                }
+            }
+        }
+    }
+    printf("%d", duplicate_count);
+    return 0;
+}
