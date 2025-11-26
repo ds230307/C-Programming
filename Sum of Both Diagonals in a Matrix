@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int N;
+    scanf("%d", &N);
+    int matrix[100][100];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    long long primary_sum = 0, secondary_sum = 0;
+    for (int i = 0; i < N; i++) {
+        primary_sum += matrix[i][i];
+        secondary_sum += matrix[i][N - i - 1];
+    }
+    long long total_sum = primary_sum + secondary_sum;
+    if (N % 2 == 1) {
+        total_sum -= matrix[N / 2][N / 2];
+    }
+    printf("Sum of Primary Diagonal: %lld\n", primary_sum);
+    printf("Sum of Secondary Diagonal: %lld\n", secondary_sum);
+    printf("Total Sum of Both Diagonals: %lld\n", total_sum);
+    return 0;
+}
