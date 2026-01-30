@@ -14,3 +14,4 @@ place = place*10;(system doesnt accepts leading zeros)
 printf("Binary  %d is %d", num1, bin);
 return 0;
 }
+for other conversions just replace 2 by other numbers like = 8,16.
